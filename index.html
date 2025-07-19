@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>De Motos y Más</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="fade-in"> De Motos y Más</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#tipos">Tipos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <div class="carousel fade-in">
+      <button id="btn-left" class="carousel-btn left" aria-label="Slide anterior">&#10094;</button>
+      <div id="carousel-track" class="carousel-track">
+        <img src="img/ftNaked2.jpg" class="carousel-image zoom-img" alt="Moto naked 2" loading="lazy" />
+        <img src="img/ftOff-road2.jpg" class="carousel-image zoom-img" alt="Moto off-road 2" loading="lazy" />
+        <img src="img/ftAventure2.jpg" class="carousel-image zoom-img" alt="Moto adventure 2" loading="lazy" />
+        <img src="img/ftTouring2.webp" class="carousel-image zoom-img" alt="Moto touring 2" loading="lazy" />
+        <img src="img/ftElec2.jpg" class="carousel-image zoom-img" alt="Moto eléctrica 2" loading="lazy" />
+        <img src="img/ftdeportiva.jpg" class="carousel-image zoom-img" alt="Moto deportiva" loading="lazy" />
+        <img src="img/ftNaked5.jpg" class="carousel-image zoom-img" alt="Moto naked 5" loading="lazy" />
+        <img src="img/ftOff-road3.jpg" class="carousel-image zoom-img" alt="Moto off-road 3" loading="lazy" />
+        <img src="img/ftAventure3.jpg" class="carousel-image zoom-img" alt="Moto adventure 3" loading="lazy" />
+        <img src="img/ftTouring3.jpg" class="carousel-image zoom-img" alt="Moto touring 3" loading="lazy" />
+        <img src="img/ftElec3.webp" class="carousel-image zoom-img" alt="Moto eléctrica 3" loading="lazy" />
+        <img src="img/ftdeportiva2.jpg" class="carousel-image zoom-img" alt="Moto eléctrica 3" loading="lazy" />
+        <img src="img/ftElec3.webp" class="carousel-image zoom-img" alt="Moto eléctrica 3" loading="lazy" />
+        <img src="img/ftNaked.jpg" class="carousel-image zoom-img" alt="Moto eléctrica 3" loading="lazy" />
+        <img src="img/ftOff-road.webp" class="carousel-image zoom-img" alt="Moto eléctrica 3" loading="lazy" />
+        <img src="img/ftAventure.jpg" class="carousel-image zoom-img" alt="Moto eléctrica 3" loading="lazy" />
+        <img src="img/ftTouring.webp" class="carousel-image zoom-img" alt="Moto eléctrica 3" loading="lazy" />
+      </div>
+      <button id="btn-right" class="carousel-btn right" aria-label="Siguiente slide">&#10095;</button>
+      <div id="carousel-dots" class="carousel-dots" aria-label="Navegación del carrusel"></div>
+    </div>
+
+    <section id="bienvenida" class="fade-in">
+      <h2>Bienvenido al mundo de las motos</h2>
+      <p>Explora los diferentes tipos de motos y encuentra la ideal para ti. Desde deportivas hasta eléctricas, tenemos todo lo que necesitas saber.</p>
+    </section>
+
+    <input type="text" id="busqueda" placeholder="Buscar tipo de moto..." aria-label="Buscar tipo de moto">
+    <div id="filtros">
+      <button onclick="filtrar('')" aria-label="Mostrar todo">Mostrar todo</button>
+      <button onclick="filtrar('deportiva')" aria-label="Mostrar motos deportivas">Deportivas</button>
+      <button onclick="filtrar('off-road')" aria-label="Mostrar motos off-road">Off-road</button>
+      <button onclick="filtrar('naked')" aria-label="Mostrar motos naked">Naked</button>
+      <button onclick="filtrar('touring')" aria-label="Mostrar motos touring">Touring</button>
+      <button onclick="filtrar('adventure')" aria-label="Mostrar motos adventure">Adventure</button>
+      <button onclick="filtrar('eléctrica')" aria-label="Mostrar motos eléctricas">Eléctricas</button>
+    </div>
+
+    <section id="tipos">
+      <div class="tipo fade-in deportiva">
+        <h3>Motos Deportivas</h3>
+        <img src="img/ftDeportiva4.jpg" class="zoom-img" alt="Moto deportiva" loading="lazy">
+        <p><strong>Uso:</strong> Alta velocidad, rendimiento en carretera.</p>
+        <p><strong>Características:</strong> Carenado aerodinámico, posición de conducción inclinada hacia adelante.</p>
+        <p><strong>Ejemplos:</strong> Yamaha R1, Kawasaki Ninja, Suzuki GSX-R.</p>
+      </div>
+
+      <div class="tipo fade-in off-road">
+        <h3>Motos Off-road</h3>
+        <img src="img/ftOff-road3.jpg" class="zoom-img" alt="Moto off-road" loading="lazy">
+        <p><strong>Uso:</strong> Terreno difícil, carreras de tierra.</p>
+        <p><strong>Características:</strong> Ligeras, neumáticos con tacos, suspensión alta.</p>
+        <p><strong>Ejemplos:</strong> KTM SX, Yamaha YZ, Honda CRF.</p>
+      </div>
+
+      <div class="tipo fade-in naked">
+        <h3>Motos Naked</h3>
+        <img src="img/ftNaked.jpg" class="zoom-img" alt="Moto naked" loading="lazy">
+        <p><strong>Uso:</strong> Ciudad y carretera, versátiles.</p>
+        <p><strong>Características:</strong> Sin carenado, diseño minimalista, postura más cómoda.</p>
+        <p><strong>Ejemplos:</strong> Yamaha MT-07, Honda CB650R.</p>
+      </div>
+
+      <div class="tipo fade-in touring">
+        <h3>Motos Touring</h3>
+        <img src="img/ftTouring4.jpg" class="zoom-img" alt="Moto touring" loading="lazy">
+        <p><strong>Uso:</strong> Viajes largos.</p>
+        <p><strong>Características:</strong> Muy cómodas, con parabrisas, maletas y tanque grande.</p>
+        <p><strong>Ejemplos:</strong> Honda Goldwing, BMW K1600.</p>
+      </div>
+
+      <div class="tipo fade-in adventure">
+        <h3>Motos Adventure / Trail</h3>
+        <img src="img/ftAventure4.jpg" class="zoom-img" alt="Moto adventure" loading="lazy">
+        <p><strong>Uso:</strong> Carretera y fuera de ella (on/off road).</p>
+        <p><strong>Características:</strong> Alta suspensión, ruedas grandes, postura erguida.</p>
+        <p><strong>Ejemplos:</strong> BMW GS, Honda Africa Twin.</p>
+      </div>
+
+      <div class="tipo fade-in eléctrica">
+        <h3>Motos Eléctricas</h3>
+        <img src="img/ftElec2.jpg" class="zoom-img" alt="Moto eléctrica" loading="lazy">
+        <p><strong>Uso:</strong> Urbano o mixto, ecológicas.</p>
+        <p><strong>Características:</strong> Motor eléctrico, bajo mantenimiento, sin emisiones.</p>
+        <p><strong>Ejemplos:</strong> Super Soco TC, Zero SR/F, NIU NQi.</p>
+      </div>
+
+      <p id="sin-resultados" style="display:none;">No se encontraron resultados.</p>
+    </section>
+
+    <section id="contacto" class="fade-in">
+      <h2>Contáctanos</h2>
+      <form>
+        <label for="nombre" class="sr-only">Tu nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        <label for="correo" class="sr-only">Tu correo</label>
+        <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
+        <label for="mensaje" class="sr-only">Tu mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/1ByDbn3tzy/" target="_blank" aria-label="Facebook">
+          <img src="img/logofacebok.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/mmm_jhon?igsh=bW0xN3lxM2p6MHU0" target="_blank" aria-label="Instagram">
+          <img src="img/logoinstagram.png" alt="Instagram" />
+        </a>
+      </div>
+      <div class="footer-contact">
+        <p><span class="icon">📍</span> Ayacucho, Perú</p>
+        <p><span class="icon">📞</span> +51 997 307782</p>
+        <p><span class="icon">✉️</span> <a href="mailto:beckperez17@gmail.com">beckperez17@gmail.com</a></p>
+      </div>
+      <div class="footer-logo">
+        <img src="img/logo.jpg" alt="Logo" />
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p class="copyright">© 2025 Jhon Quispe</p>
+      <p class="powered-by">Desarrollado por <a href="#">JB - DEV</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
